@@ -7,11 +7,7 @@
 
 import Foundation
 
-struct Request {
-    let people: [People]
-    let planets: [Planet]
-    let films: [Films]
-    let species: [Species]
-    let vehicles: [Vehicle]
-    let starships: [Starships]
+struct Request: Codable {
+    let people: String
 }
+

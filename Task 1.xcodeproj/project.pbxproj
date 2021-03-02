@@ -19,6 +19,8 @@
 		3A3B7C6B25ECFFD2009B326A /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6A25ECFFD2009B326A /* DataViewController.swift */; };
 		3A3B7C8025ED3836009B326A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C7F25ED3836009B326A /* Constants.swift */; };
 		3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138F925EE0E0100F63AB2 /* Request.swift */; };
+		3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */; };
+		3AC1390525EE223800F63AB2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1390425EE223800F63AB2 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3A3B7C6A25ECFFD2009B326A /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		3A3B7C7F25ED3836009B326A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AC138F925EE0E0100F63AB2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequest.swift; sourceTree = "<group>"; };
+		3AC1390425EE223800F63AB2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		907C341934B3504D8760CD04 /* Pods-Task 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 1.release.xcconfig"; path = "Target Support Files/Pods-Task 1/Pods-Task 1.release.xcconfig"; sourceTree = "<group>"; };
 		CAC6813B7BC8DDFE733E0F3D /* Pods_Task_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35A30F5D6D05A4179082B5A /* Pods-Task 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 1.debug.xcconfig"; path = "Target Support Files/Pods-Task 1/Pods-Task 1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,17 +77,11 @@
 		3A3B7C4825ECF5B2009B326A /* Task 1 */ = {
 			isa = PBXGroup;
 			children = (
-				3A3B7C4D25ECF5B2009B326A /* MainViewController.swift */,
-				3A3B7C6A25ECFFD2009B326A /* DataViewController.swift */,
-				3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */,
 				3AC138F825EE0DE800F63AB2 /* Models */,
-				3A3B7C4925ECF5B2009B326A /* AppDelegate.swift */,
-				3A3B7C7F25ED3836009B326A /* Constants.swift */,
-				3A3B7C4B25ECF5B2009B326A /* SceneDelegate.swift */,
-				3A3B7C4F25ECF5B2009B326A /* Main.storyboard */,
-				3A3B7C5225ECF5B6009B326A /* Assets.xcassets */,
-				3A3B7C5425ECF5B6009B326A /* LaunchScreen.storyboard */,
-				3A3B7C5725ECF5B6009B326A /* Info.plist */,
+				3AC1390725EE223C00F63AB2 /* Controllers */,
+				3AC1390825EE224F00F63AB2 /* Networking */,
+				3AC1390D25EE2BBE00F63AB2 /* Storyboards */,
+				3AC1390C25EE2BAC00F63AB2 /* Supporting Files */,
 			);
 			path = "Task 1";
 			sourceTree = "<group>";
@@ -93,8 +91,48 @@
 			children = (
 				3A3B7C6625ECFA20009B326A /* People.swift */,
 				3AC138F925EE0E0100F63AB2 /* Request.swift */,
+				3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3AC1390725EE223C00F63AB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B7C4D25ECF5B2009B326A /* MainViewController.swift */,
+				3AC1390425EE223800F63AB2 /* TableViewController.swift */,
+				3A3B7C6A25ECFFD2009B326A /* DataViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3AC1390825EE224F00F63AB2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3AC1390C25EE2BAC00F63AB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B7C7F25ED3836009B326A /* Constants.swift */,
+				3A3B7C4925ECF5B2009B326A /* AppDelegate.swift */,
+				3A3B7C4B25ECF5B2009B326A /* SceneDelegate.swift */,
+				3A3B7C5225ECF5B6009B326A /* Assets.xcassets */,
+				3A3B7C5725ECF5B6009B326A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AC1390D25EE2BBE00F63AB2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B7C5425ECF5B6009B326A /* LaunchScreen.storyboard */,
+				3A3B7C4F25ECF5B2009B326A /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		B07D71958848E7D7E74F1DEB /* Pods */ = {
@@ -231,9 +269,11 @@
 				3A3B7C6425ECF985009B326A /* AlomofireRequest.swift in Sources */,
 				3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */,
 				3A3B7C4E25ECF5B2009B326A /* MainViewController.swift in Sources */,
+				3AC1390525EE223800F63AB2 /* TableViewController.swift in Sources */,
 				3A3B7C4A25ECF5B2009B326A /* AppDelegate.swift in Sources */,
 				3A3B7C4C25ECF5B2009B326A /* SceneDelegate.swift in Sources */,
 				3A3B7C8025ED3836009B326A /* Constants.swift in Sources */,
+				3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */,
 				3A3B7C6B25ECFFD2009B326A /* DataViewController.swift in Sources */,
 				3A3B7C6725ECFA20009B326A /* People.swift in Sources */,
 			);
@@ -385,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A752375V8;
-				INFOPLIST_FILE = "Task 1/Info.plist";
+				INFOPLIST_FILE = "Task 1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A752375V8;
-				INFOPLIST_FILE = "Task 1/Info.plist";
+				INFOPLIST_FILE = "Task 1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

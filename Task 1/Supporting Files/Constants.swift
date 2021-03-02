@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-    static let url = "https://swapi.dev/api/people/1/"
+    static let url = "https://swapi.dev/api/"
 }
