@@ -8,16 +8,12 @@
 import Foundation
 import ObjectMapper
 
-struct PeopleRequest: Mappable {
+class PeopleRequest: BaseMappableModel {
     var count: Int?
     var next: String?
     var results: [People]?
     
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
+    override func mapping(map: Map) {
         count <- map["count"]
         next <- map["next"]
         results <- map["results"]

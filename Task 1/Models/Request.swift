@@ -8,14 +8,10 @@
 import Foundation
 import ObjectMapper
 
-struct Request: Mappable {
+class Request: BaseMappableModel {
     var people: String?
     
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
+    override func mapping(map: Map) {
         people <- map["people"]
     }
 }
