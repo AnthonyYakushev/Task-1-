@@ -48,5 +48,5 @@ struct People: Mappable {
         created <- map["created"]
         edited <- map["edited"]
         url <- map["url"]
-        }
+    }
 }

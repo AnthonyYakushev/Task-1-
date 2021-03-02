@@ -11,9 +11,9 @@ class MainViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func requestButton(_ sender: UIButton) {
-        if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ListViewController") as? ListViewController {
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        
+        let vc = ListViewController(nibName: "ListViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

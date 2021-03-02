@@ -9,7 +9,6 @@ import Foundation
 import ObjectMapper
 
 struct Request: Mappable {
-    
     var people: String?
     
     init?(map: Map) {

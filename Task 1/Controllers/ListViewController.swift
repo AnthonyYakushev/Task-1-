@@ -11,24 +11,23 @@ class ListViewController: UITableViewController {
     
     // MARK: - Variables
     var peoples = [People]()
-    var pickedPeople: People?
     
     // MARK: - Life Cylce
     override func viewDidLoad() {
         fillInPeoplesArray(url: Constants.url)
+        tableView.register(MyCell.self, forCellReuseIdentifier: "cell")
     }
     
     // MARK: - Methods
     func fillInPeoplesArray(url: String) {
-        AlamofireRequest.sendRequest(url: url) { [weak self] (ppls) in
-            self?.peoples = ppls
+        AlamofireRequest.sendRequest(url: url) { [weak self] (peoples) in
+            self?.peoples = peoples
             self?.tableView.reloadData()
         }
     }
     
     // MARK: - TableView DataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return peoples.count
     }
     
@@ -41,11 +40,9 @@ class ListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = peoples[indexPath.row]
-        pickedPeople = object
         
-        if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DataViewController") as? DataViewController {
-            vc.people = pickedPeople
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let vc = DataViewController(nibName: "DataViewController", bundle: nil)
+        vc.people = object
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

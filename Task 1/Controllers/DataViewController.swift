@@ -10,7 +10,6 @@ import UIKit
 class DataViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet var collections: [UILabel]!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var massLabel: UILabel!
@@ -27,7 +26,6 @@ class DataViewController: UIViewController {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var editedLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Variables
     var people: People?
@@ -41,19 +39,19 @@ class DataViewController: UIViewController {
     
     // MARK: - Methods
     func configurePage(people: People?) {
-        self.nameLabel.text = "Name: \(people?.name ?? "-")"
-        self.heightLabel.text = "Height: \(people?.height ?? "-")"
-        self.massLabel.text = "Mass: \(people?.mass ?? "-")"
-        self.harColorLabel.text = "Hair Color: \(people?.hairColor ?? "-")"
-        self.skinColorLabel.text = "Skin Color: \(people?.skinColor ?? "-")"
-        self.eyeColorLabel.text = "Eye Color: \(people?.eyeColor ?? "-")"
-        self.birthLabel.text = "Birth Year: \(people?.birthYear ?? "-")"
-        self.genderLabel.text = "Gender: \(people?.gender ?? "-")"
+        self.nameLabel.text = people?.name
+        self.heightLabel.text = people?.height
+        self.massLabel.text = people?.mass
+        self.harColorLabel.text = people?.hairColor
+        self.skinColorLabel.text = people?.skinColor
+        self.eyeColorLabel.text = people?.eyeColor
+        self.birthLabel.text = people?.birthYear
+        self.genderLabel.text = people?.gender
         self.homeWorldLabel.text = people?.homeworld
-        self.filmsLabel.text = people?.films?.joined(separator: " ")
-        self.speciesLabel.text = people?.species?.joined(separator: " ")
-        self.vehiclesLabel.text = people?.vehicles?.joined(separator: " ")
-        self.starhipsLabel.text = people?.starships?.joined(separator: " ")
+        self.filmsLabel.text = people?.films?.joined(separator: "\n")
+        self.speciesLabel.text = people?.species?.joined(separator: "\n")
+        self.vehiclesLabel.text = people?.vehicles?.joined(separator: "\n")
+        self.starhipsLabel.text = people?.starships?.joined(separator: "\n")
         self.createdLabel.text = people?.created
         self.editedLabel.text = people?.edited
         self.urlLabel.text = people?.url

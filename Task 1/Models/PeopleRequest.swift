@@ -9,7 +9,6 @@ import Foundation
 import ObjectMapper
 
 struct PeopleRequest: Mappable {
-    
     var count: Int?
     var next: String?
     var results: [People]?

@@ -21,6 +21,11 @@
 		3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138F925EE0E0100F63AB2 /* Request.swift */; };
 		3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */; };
 		3AC1390525EE223800F63AB2 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1390425EE223800F63AB2 /* ListViewController.swift */; };
+		3AC1392E25EE628B00F63AB2 /* BaseMappableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1392D25EE628B00F63AB2 /* BaseMappableModel.swift */; };
+		3AC1395925EE74F400F63AB2 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1395825EE74F400F63AB2 /* ListViewController.xib */; };
+		3AC1395C25EE75AA00F63AB2 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1395B25EE75AA00F63AB2 /* MyCell.swift */; };
+		3AC1396125EE766A00F63AB2 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1396025EE766A00F63AB2 /* DataViewController.xib */; };
+		3AC1396425EE79FE00F63AB2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1396325EE79FE00F63AB2 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		3AC138F925EE0E0100F63AB2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequest.swift; sourceTree = "<group>"; };
 		3AC1390425EE223800F63AB2 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		3AC1392D25EE628B00F63AB2 /* BaseMappableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMappableModel.swift; sourceTree = "<group>"; };
+		3AC1395825EE74F400F63AB2 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		3AC1395B25EE75AA00F63AB2 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		3AC1396025EE766A00F63AB2 /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		3AC1396325EE79FE00F63AB2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		907C341934B3504D8760CD04 /* Pods-Task 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 1.release.xcconfig"; path = "Target Support Files/Pods-Task 1/Pods-Task 1.release.xcconfig"; sourceTree = "<group>"; };
 		CAC6813B7BC8DDFE733E0F3D /* Pods_Task_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35A30F5D6D05A4179082B5A /* Pods-Task 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task 1.debug.xcconfig"; path = "Target Support Files/Pods-Task 1/Pods-Task 1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC138F825EE0DE800F63AB2 /* Models */,
+				3AC1395E25EE75F400F63AB2 /* Views */,
 				3AC1390725EE223C00F63AB2 /* Controllers */,
 				3AC1390825EE224F00F63AB2 /* Networking */,
 				3AC1390D25EE2BBE00F63AB2 /* Storyboards */,
@@ -110,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */,
+				3AC1392D25EE628B00F63AB2 /* BaseMappableModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -129,10 +141,29 @@
 		3AC1390D25EE2BBE00F63AB2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3AC1393025EE648D00F63AB2 /* XIBs */,
 				3A3B7C5425ECF5B6009B326A /* LaunchScreen.storyboard */,
 				3A3B7C4F25ECF5B2009B326A /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3AC1393025EE648D00F63AB2 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1396325EE79FE00F63AB2 /* MainViewController.xib */,
+				3AC1395825EE74F400F63AB2 /* ListViewController.xib */,
+				3AC1396025EE766A00F63AB2 /* DataViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		3AC1395E25EE75F400F63AB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1395B25EE75AA00F63AB2 /* MyCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B07D71958848E7D7E74F1DEB /* Pods */ = {
@@ -212,7 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3B7C5625ECF5B6009B326A /* LaunchScreen.storyboard in Resources */,
+				3AC1396425EE79FE00F63AB2 /* MainViewController.xib in Resources */,
+				3AC1396125EE766A00F63AB2 /* DataViewController.xib in Resources */,
 				3A3B7C5325ECF5B6009B326A /* Assets.xcassets in Resources */,
+				3AC1395925EE74F400F63AB2 /* ListViewController.xib in Resources */,
 				3A3B7C5125ECF5B2009B326A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +304,12 @@
 				3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */,
 				3A3B7C4E25ECF5B2009B326A /* MainViewController.swift in Sources */,
 				3AC1390525EE223800F63AB2 /* ListViewController.swift in Sources */,
+				3AC1392E25EE628B00F63AB2 /* BaseMappableModel.swift in Sources */,
 				3A3B7C4A25ECF5B2009B326A /* AppDelegate.swift in Sources */,
 				3A3B7C4C25ECF5B2009B326A /* SceneDelegate.swift in Sources */,
 				3A3B7C8025ED3836009B326A /* Constants.swift in Sources */,
 				3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */,
+				3AC1395C25EE75AA00F63AB2 /* MyCell.swift in Sources */,
 				3A3B7C6B25ECFFD2009B326A /* DataViewController.swift in Sources */,
 				3A3B7C6725ECFA20009B326A /* People.swift in Sources */,
 			);
