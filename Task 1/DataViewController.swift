@@ -9,9 +9,7 @@ import UIKit
 
 class DataViewController: UIViewController {
     
-    
     @IBOutlet var collections: [UILabel]!
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var massLabel: UILabel!
@@ -28,51 +26,46 @@ class DataViewController: UIViewController {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var editedLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func dismissButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
     
-    private let url = "https://swapi.dev/api/people/1/"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in collections {
-            i.isHidden = true
-        }
 
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         
+        request(url: Constants.url)
+    
+        }
+        
+    func request(url: String) {
         AlamofireRequest.sendRequest(url: url) { (people) in
-            DispatchQueue.main.async {
-                self.nameLabel.text = people.name
-                self.heightLabel.text = people.height
-                self.massLabel.text = people.mass
-                self.harColorLabel.text = people.hairColor
-                self.skinColorLabel.text = people.skinColor
-                self.eyeColorLabel.text = people.eyeColor
-                self.birthLabel.text = people.birthYear
-                self.genderLabel.text = people.gender
-                self.homeWorldLabel.text = people.homeworld
-                self.filmsLabel.text = people.films.joined(separator: " ")
-                self.speciesLabel.text = people.species.joined(separator: " ")
-                self.vehiclesLabel.text = people.vehicles.joined(separator: " ")
-                self.starhipsLabel.text = people.starships.joined(separator: " ")
-                self.createdLabel.text = people.created
-                self.editedLabel.text = people.edited
-                self.urlLabel.text = people.url
-                
-                self.activityIndicator.stopAnimating()
-                
-                for i in self.collections {
-                    i.isHidden = false
-                }
+            self.nameLabel.text = people.name
+            self.heightLabel.text = people.height
+            self.massLabel.text = people.mass
+            self.harColorLabel.text = people.hairColor
+            self.skinColorLabel.text = people.skinColor
+            self.eyeColorLabel.text = people.eyeColor
+            self.birthLabel.text = people.birthYear
+            self.genderLabel.text = people.gender
+            self.homeWorldLabel.text = people.homeworld
+            self.filmsLabel.text = people.films.joined(separator: " ")
+            self.speciesLabel.text = people.species.joined(separator: " ")
+            self.vehiclesLabel.text = people.vehicles.joined(separator: " ")
+            self.starhipsLabel.text = people.starships.joined(separator: " ")
+            self.createdLabel.text = people.created
+            self.editedLabel.text = people.edited
+            self.urlLabel.text = people.url
+            
+            self.activityIndicator.stopAnimating()
+            
+            for i in self.collections {
+                i.isHidden = false
             }
         }
     }
-    
 }

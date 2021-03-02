@@ -8,15 +8,10 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
-    let url = "https://swapi.dev/api/people/1/"
-    
-    @IBAction func requestTapped(_ sender: UIButton) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view. // пустых методов быть не должно
     }
 }
 

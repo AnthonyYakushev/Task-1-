@@ -45,7 +45,7 @@ struct People: Codable {
         let edited = dict["edited"] as? String
         let url = dict["url"] as? String
         
-        self.name = name ?? "-"
+        self.name = name ?? "-" // лучше в контроллере проверить на наличие данных и скрывать если их нет
         self.height = height ?? "-"
         self.mass = mass ?? "-"
         self.hairColor = hair_color ?? "-"
