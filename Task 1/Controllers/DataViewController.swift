@@ -9,7 +9,7 @@ import UIKit
 
 class DataViewController: UIViewController {
     
-    // MARK: - Outlets
+    // MARK: - IBOutlets
     @IBOutlet var collections: [UILabel]!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
@@ -50,10 +50,10 @@ class DataViewController: UIViewController {
         self.birthLabel.text = "Birth Year: \(people?.birthYear ?? "-")"
         self.genderLabel.text = "Gender: \(people?.gender ?? "-")"
         self.homeWorldLabel.text = people?.homeworld
-        self.filmsLabel.text = people?.films.joined(separator: " ")
-        self.speciesLabel.text = people?.species.joined(separator: " ")
-        self.vehiclesLabel.text = people?.vehicles.joined(separator: " ")
-        self.starhipsLabel.text = people?.starships.joined(separator: " ")
+        self.filmsLabel.text = people?.films?.joined(separator: " ")
+        self.speciesLabel.text = people?.species?.joined(separator: " ")
+        self.vehiclesLabel.text = people?.vehicles?.joined(separator: " ")
+        self.starhipsLabel.text = people?.starships?.joined(separator: " ")
         self.createdLabel.text = people?.created
         self.editedLabel.text = people?.edited
         self.urlLabel.text = people?.url

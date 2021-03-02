@@ -14,25 +14,24 @@ class AlamofireRequest {
         
         guard let url = URL(string: url) else { return }
         
-        AF.request(url).response { (response) in
-            guard let data = response.data else { return }
-            do {
-                let jsonDecoder = JSONDecoder()
-                let request = try jsonDecoder.decode(Request.self, from: data)
-                let urlPeople = request.people
+        AF.request(url).responseString { (response) in
+            switch response.result {
+            case .success(let string):
+                guard let rqstt = Request(JSONString: string),
+                      let urlString = rqstt.people,
+                      let urlPeople = URL(string: urlString) else { return }
                 
-                AF.request(urlPeople).response { (response) in
-                    guard let data = response.data else { return }
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        let peopleRequest = try jsonDecoder.decode(PeopleRequest.self, from: data)
-                        completion(peopleRequest.results)
-                    }
-                    catch {
+                AF.request(urlPeople).responseString { (response) in
+                    switch response.result {
+                    case .success(let string):
+                        guard let peopleRequest = PeopleRequest(JSONString: string),
+                              let peoples = peopleRequest.results else { return }
+                        completion(peoples)
+                    case .failure(let error):
                         print(error)
                     }
                 }
-            } catch {
+            case .failure(let error):
                 print(error)
             }
         }

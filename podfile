@@ -1,4 +1,5 @@
 use_frameworks!
 target 'Task 1' do
-    pod 'Alamofire', '~> 5.2'
+    pod 'Alamofire'
+    pod 'ObjectMapper'
 end

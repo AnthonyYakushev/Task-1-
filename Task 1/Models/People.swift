@@ -6,41 +6,47 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct People: Codable {
-    enum CodingKeys: String, CodingKey {
-        case name
-        case height
-        case mass
-        case hairColor = "hair_color"
-        case skinColor = "skin_color"
-        case eyeColor = "eye_color"
-        case birthYear = "birth_year"
-        case gender
-        case homeworld
-        case films
-        case species
-        case vehicles
-        case starships
-        case created
-        case edited
-        case url
+struct People: Mappable {
+    
+    var name: String?
+    var height: String?
+    var mass: String?
+    var hairColor: String?
+    var skinColor: String?
+    var eyeColor: String?
+    var birthYear: String?
+    var gender: String?
+    var homeworld: String?
+    var films: [String]?
+    var species: [String]?
+    var vehicles: [String]?
+    var starships: [String]?
+    var created: String?
+    var edited: String?
+    var url: String?
+    
+    init?(map: Map) {
+        
     }
     
-    let name: String
-    let height: String
-    let mass: String
-    let hairColor: String
-    let skinColor: String
-    let eyeColor: String
-    let birthYear: String
-    let gender: String
-    let homeworld: String
-    let films: [String]
-    let species: [String]
-    let vehicles: [String]
-    let starships: [String]
-    let created: String
-    let edited: String
-    let url: String
+    mutating func mapping(map: Map) {
+        name <- map["name"]
+        height <- map["height"]
+        mass <- map["mass"]
+        hairColor <- map["hair_color"]
+        skinColor <- map["skin_color"]
+        eyeColor <- map ["eye_color"]
+        birthYear <- map ["birth_year"]
+        gender <- map["gender"]
+        homeworld <- map["homeworld"]
+        films <- map["films"]
+        species <- map["species"]
+        vehicles <- map["vehicles"]
+        starships <- map["starships"]
+        created <- map["created"]
+        edited <- map["edited"]
+        url <- map["url"]
+        }
 }

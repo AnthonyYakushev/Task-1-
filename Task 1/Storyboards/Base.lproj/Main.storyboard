@@ -31,7 +31,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Umn-a2-2ot" kind="show" id="FpG-2m-5hW"/>
+                                    <action selector="requestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOW-Lj-1r1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +47,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R6Y-IU-gBW"/>
+                    <connections>
+                        <segue destination="Umn-a2-2ot" kind="show" identifier="c" id="erj-16-1ij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +58,7 @@
         <!--Data View Controller-->
         <scene sceneID="H8n-g9-kUu">
             <objects>
-                <viewController id="DIJ-mZ-kkF" customClass="DataViewController" customModule="Task_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataViewController" id="DIJ-mZ-kkF" customClass="DataViewController" customModule="Task_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30F-Ng-fOB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="2617" y="55"/>
         </scene>
-        <!--Table View Controller-->
+        <!--List View Controller-->
         <scene sceneID="a6j-we-vQU">
             <objects>
-                <tableViewController id="Umn-a2-2ot" customClass="TableViewController" customModule="Task_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListViewController" id="Umn-a2-2ot" customClass="ListViewController" customModule="Task_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Agy-yC-bvz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

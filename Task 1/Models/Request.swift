@@ -6,8 +6,18 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct Request: Codable {
-    let people: String
+struct Request: Mappable {
+    
+    var people: String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        people <- map["people"]
+    }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ListViewController: UITableViewController {
     
     // MARK: - Variables
     var peoples = [People]()
@@ -20,15 +20,9 @@ class TableViewController: UITableViewController {
     
     // MARK: - Methods
     func fillInPeoplesArray(url: String) {
-        AlamofireRequest.sendRequest(url: url) { (ppls) in
-            self.peoples = ppls
-            self.tableView.reloadData()
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DataViewController {
-            vc.people = pickedPeople
+        AlamofireRequest.sendRequest(url: url) { [weak self] (ppls) in
+            self?.peoples = ppls
+            self?.tableView.reloadData()
         }
     }
     
@@ -48,6 +42,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = peoples[indexPath.row]
         pickedPeople = object
-        performSegue(withIdentifier: "Second Segue", sender: nil)
+        
+        if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DataViewController") as? DataViewController {
+            vc.people = pickedPeople
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
