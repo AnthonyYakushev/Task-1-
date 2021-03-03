@@ -10,6 +10,9 @@ import UIKit
 class ListViewController: UITableViewController {
     // MARK: - Variables
     var peoples = [People]()
+    var indexOfpage = 1
+    var isPaginating = false
+    lazy var size = tableView.bounds.height / CGFloat(peoples.count + 1)
     
     // MARK: - Life Cylce
     override func viewDidLoad() {
@@ -19,9 +22,14 @@ class ListViewController: UITableViewController {
     
     // MARK: - Methods
     func fillInPeoplesArray() {
-        AlamofireRequest.sendRequest(url: Constants.url) { [weak self] (peoples) in
-            self?.peoples = peoples
-            self?.tableView.reloadData()
+        AlamofireRequest.sendRequest(pagination: true, url: Constants.url, page: indexOfpage) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.peoples = data
+                self?.tableView.reloadData()
+            case .failure(_):
+                break
+            }
         }
     }
     
@@ -40,8 +48,31 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = peoples[indexPath.row]
         
-        let vc = MyCollectionViewController(nibName: "MyCollectionViewController", bundle: nil)
+        let vc = DataViewController(nibName: "MyCollectionViewController", bundle: nil)
         vc.people = object
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return size
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = tableView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > (contentHeight - scrollView.frame.size.height)  {
+            guard !AlamofireRequest.isPaginating else { return }
+            indexOfpage += 1
+            AlamofireRequest.sendRequest(pagination: true, url: Constants.url, page: indexOfpage) { [weak self] (result) in
+                switch result {
+                case .success(let data):
+                    self?.peoples += data
+                    self?.tableView.reloadData()
+                case .failure(_):
+                    break
+                }
+            }
+        }
     }
 }

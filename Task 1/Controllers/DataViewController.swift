@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DataViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     

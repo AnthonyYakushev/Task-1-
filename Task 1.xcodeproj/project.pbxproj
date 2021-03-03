@@ -17,7 +17,7 @@
 		3A3B7C6425ECF985009B326A /* AlomofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */; };
 		3A3B7C6725ECFA20009B326A /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6625ECFA20009B326A /* People.swift */; };
 		3A3B7C8025ED3836009B326A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C7F25ED3836009B326A /* Constants.swift */; };
-		3A85869025EF64CE0062B8B6 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */; };
+		3A85869025EF64CE0062B8B6 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85868E25EF64CE0062B8B6 /* DataViewController.swift */; };
 		3A85869625EF67090062B8B6 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85869425EF67080062B8B6 /* CollectionCell.swift */; };
 		3A85869725EF67090062B8B6 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85869525EF67090062B8B6 /* CollectionCell.xib */; };
 		3A85869C25EF739C0062B8B6 /* MyCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85869B25EF739C0062B8B6 /* MyCollectionViewController.xib */; };
@@ -43,7 +43,7 @@
 		3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlomofireRequest.swift; sourceTree = "<group>"; };
 		3A3B7C6625ECFA20009B326A /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		3A3B7C7F25ED3836009B326A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		3A85868E25EF64CE0062B8B6 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		3A85869425EF67080062B8B6 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		3A85869525EF67090062B8B6 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		3A85869B25EF739C0062B8B6 /* MyCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewController.xib; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			children = (
 				3A3B7C4D25ECF5B2009B326A /* MainViewController.swift */,
 				3AC1390425EE223800F63AB2 /* ListViewController.swift */,
-				3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */,
+				3A85868E25EF64CE0062B8B6 /* DataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,7 +336,7 @@
 				3A3B7C8025ED3836009B326A /* Constants.swift in Sources */,
 				3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */,
 				3AC1395C25EE75AA00F63AB2 /* TableCell.swift in Sources */,
-				3A85869025EF64CE0062B8B6 /* MyCollectionViewController.swift in Sources */,
+				3A85869025EF64CE0062B8B6 /* DataViewController.swift in Sources */,
 				3A85869625EF67090062B8B6 /* CollectionCell.swift in Sources */,
 				3A3B7C6725ECFA20009B326A /* People.swift in Sources */,
 				3A85869F25EF77300062B8B6 /* PeopleDescription.swift in Sources */,

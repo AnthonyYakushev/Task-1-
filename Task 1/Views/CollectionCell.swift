@@ -8,6 +8,7 @@
 import UIKit
 
 class CollectionCell: UICollectionViewCell {
+    // MARK: - IBOutlets
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subtitle: UILabel!
 }

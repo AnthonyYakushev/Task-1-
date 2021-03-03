@@ -9,7 +9,13 @@ import Foundation
 import Alamofire
 
 class AlamofireRequest {
-    static func sendRequest(url: String, completion: @escaping (([People]) -> ())) {
+    static var isPaginating = false
+    
+    static func sendRequest(pagination: Bool = false, url: String, page: Int, completion: @escaping (Result<[People], Error>) -> Void) {
+        
+        if pagination {
+            isPaginating = true
+        }
         
         guard let url = URL(string: url) else { return }
         
@@ -20,12 +26,15 @@ class AlamofireRequest {
                       let urlString = rqstt.people,
                       let urlPeople = URL(string: urlString) else { return }
                 
-                AF.request(urlPeople).responseString { (response) in
+                AF.request("\(urlPeople)?page=\(page)").responseString { (response) in
                     switch response.result {
                     case .success(let string):
                         guard let peopleRequest = PeopleRequest(JSONString: string),
                               let peoples = peopleRequest.results else { return }
-                        completion(peoples)
+                        completion(.success(peoples))
+                        if pagination {
+                            isPaginating = false
+                        }
                     case .failure(let error):
                         print(error)
                     }
