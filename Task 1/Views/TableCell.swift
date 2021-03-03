@@ -7,6 +7,6 @@
 
 import UIKit
 
-class MyCell: UITableViewCell {
+class TableCell: UITableViewCell {
 
 }

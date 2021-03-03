@@ -14,13 +14,13 @@ class ListViewController: UITableViewController {
     
     // MARK: - Life Cylce
     override func viewDidLoad() {
-        fillInPeoplesArray(url: Constants.url)
-        tableView.register(MyCell.self, forCellReuseIdentifier: "cell")
+        fillInPeoplesArray()
+        tableView.register(TableCell.self, forCellReuseIdentifier: "cell")
     }
     
     // MARK: - Methods
-    func fillInPeoplesArray(url: String) {
-        AlamofireRequest.sendRequest(url: url) { [weak self] (peoples) in
+    func fillInPeoplesArray() {
+        AlamofireRequest.sendRequest(url: Constants.url) { [weak self] (peoples) in
             self?.peoples = peoples
             self?.tableView.reloadData()
         }
@@ -41,7 +41,7 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = peoples[indexPath.row]
         
-        let vc = DataViewController(nibName: "DataViewController", bundle: nil)
+        let vc = MyCollectionViewController(nibName: "MyCollectionViewController", bundle: nil)
         vc.people = object
         self.navigationController?.pushViewController(vc, animated: true)
     }
