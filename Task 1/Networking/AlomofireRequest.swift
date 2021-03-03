@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class AlamofireRequest {
-    
     static func sendRequest(url: String, completion: @escaping (([People]) -> ())) {
         
         guard let url = URL(string: url) else { return }

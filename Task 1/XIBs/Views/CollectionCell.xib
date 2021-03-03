@@ -4,11 +4,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionCell" customModule="Task_1" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionCell" customModule="Task_1" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
@@ -21,28 +20,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK1-cw-bDQ">
-                                <rect key="frame" x="5" y="8" width="265" height="24"/>
+                                <rect key="frame" x="8" y="8" width="259" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-GI-WQr">
-                                <rect key="frame" x="5" y="37" width="265" height="38"/>
+                                <rect key="frame" x="8" y="40" width="259" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LXG-GI-WQr" firstAttribute="top" secondItem="MK1-cw-bDQ" secondAttribute="bottom" constant="5" id="Nbw-mm-JcR"/>
-                            <constraint firstItem="MK1-cw-bDQ" firstAttribute="top" secondItem="AtB-cY-hJp" secondAttribute="top" constant="8" id="XwH-9e-943"/>
-                            <constraint firstItem="MK1-cw-bDQ" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="5" id="cKS-AD-hEs"/>
-                            <constraint firstAttribute="bottom" secondItem="LXG-GI-WQr" secondAttribute="bottom" constant="5" id="eHt-ar-LDk"/>
-                            <constraint firstAttribute="trailing" secondItem="MK1-cw-bDQ" secondAttribute="trailing" constant="5" id="gu9-8e-0mo"/>
-                            <constraint firstAttribute="trailing" secondItem="LXG-GI-WQr" secondAttribute="trailing" constant="5" id="hxO-bC-3lK"/>
-                            <constraint firstItem="LXG-GI-WQr" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="5" id="sUf-hR-7Hx"/>
+                            <constraint firstItem="LXG-GI-WQr" firstAttribute="top" secondItem="MK1-cw-bDQ" secondAttribute="bottom" constant="8" id="7pp-RW-9eu"/>
+                            <constraint firstAttribute="trailing" secondItem="MK1-cw-bDQ" secondAttribute="trailing" constant="8" id="8m1-Eo-EDJ"/>
+                            <constraint firstItem="LXG-GI-WQr" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="8" id="HJE-OE-PiS"/>
+                            <constraint firstItem="MK1-cw-bDQ" firstAttribute="top" secondItem="AtB-cY-hJp" secondAttribute="top" constant="8" id="ekv-Dk-nJt"/>
+                            <constraint firstAttribute="trailing" secondItem="LXG-GI-WQr" secondAttribute="trailing" constant="8" id="gTg-Mj-1ml"/>
+                            <constraint firstItem="MK1-cw-bDQ" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="8" id="qe0-De-Gvd"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -62,9 +60,4 @@
             <point key="canvasLocation" x="242.75362318840581" y="107.60869565217392"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

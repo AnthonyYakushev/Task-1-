@@ -8,7 +8,6 @@
 import UIKit
 
 class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -47,11 +46,6 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         
         cell.title.text = object.title
         cell.subtitle.text = object.subtitle
-        
-        cell.layer.masksToBounds = false;
-        cell.layer.shadowOffset = CGSize(width: 5, height: 5)
-        cell.layer.shadowRadius = 5;
-        cell.layer.shadowOpacity = 0.5;
         
         return cell
     }

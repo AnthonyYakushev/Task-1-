@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
     // MARK: - IBActions
     @IBAction func requestButton(_ sender: UIButton) {
         

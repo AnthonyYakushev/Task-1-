@@ -13,6 +13,7 @@ struct PeopleDescription {
     
     static func getArrayFromPeople(_ people: People) -> [PeopleDescription] {
         var peopleDescriptionArray = [PeopleDescription]()
+        
         if let name = people.name, name.isEmpty == false {
             peopleDescriptionArray.append(PeopleDescription(title: "Name:", subtitle: name))
         }

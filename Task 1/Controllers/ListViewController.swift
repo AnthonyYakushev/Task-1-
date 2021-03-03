@@ -8,7 +8,6 @@
 import UIKit
 
 class ListViewController: UITableViewController {
-    
     // MARK: - Variables
     var peoples = [People]()
     
