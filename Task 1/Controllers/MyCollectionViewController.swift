@@ -30,13 +30,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     }
 
     // MARK:- UICollectionViewDataSource
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
         return arrayDescriptions.count
     }
 
@@ -44,8 +38,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
         let object = arrayDescriptions[indexPath.row]
         
-        cell.title.text = object.title
-        cell.subtitle.text = object.subtitle
+        cell.configureCell(object: object)
         
         return cell
     }
