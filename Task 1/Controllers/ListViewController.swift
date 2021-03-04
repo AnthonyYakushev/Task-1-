@@ -11,7 +11,6 @@ class ListViewController: UITableViewController {
     // MARK: - Variables
     var peoples = [People]()
     var indexOfpage = 1
-    var isPaginating = false
     lazy var size = tableView.bounds.height / CGFloat(peoples.count + 1)
     
     // MARK: - Life Cylce
