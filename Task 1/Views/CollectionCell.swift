@@ -14,5 +14,6 @@ class CollectionCell: UICollectionViewCell {
     
     func configureCell(object: PeopleDescription) {
         self.title.text = object.title
+        self.subtitle.text = object.subtitle.joined(separator: "\n")
     }
 }
