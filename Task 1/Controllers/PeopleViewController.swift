@@ -7,41 +7,54 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
+class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: - Variables
     var peoples = [PeopleData]()
     
     // MARK: - Life Cylce
     override func viewDidLoad() {
-        fillInPeoplesArray()
+        tableView.delegate = self
+        tableView.dataSource = self
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         tableView.register(TableCell.self, forCellReuseIdentifier: "cell")
+        fillInPeoplesArray()
     }
     
     // MARK: - Methods
     func fillInPeoplesArray() {
         AlamofireRequest.sendRequest(url: Constants.url) { [weak self] (peoples) in
             self?.peoples = peoples
+            self?.activityIndicator.stopAnimating()
+            self?.activityIndicator.isHidden = true
             self?.tableView.reloadData()
+            self?.tableView.isHidden = false
         }
     }
     
     // MARK: - TableView DataSource
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peoples.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let people = peoples[indexPath.row]
         cell.textLabel?.text = people.name
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = peoples[indexPath.row]
         
         let vc = MyCollectionViewController(nibName: "MyCollectionViewController", bundle: nil)
-        vc.people = object
+        guard let url = object.url else { return }
+        vc.myentity = .people
+        vc.url = url
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PresentingVCDelegate {
-    func pushVC(string: String, description: String)
+    func pushVC(string: String, description: Entity)
 }

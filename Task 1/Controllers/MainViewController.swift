@@ -10,8 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func requestButton(_ sender: UIButton) {
-        
-        let vc = ListViewController(nibName: "ListViewController", bundle: nil)
+        let vc = PeopleViewController(nibName: "PeopleViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -36,30 +36,31 @@ class AlamofireRequest {
         }
     }
     
-    static func reusableRequest(url: String, description: String, completion: @escaping ((BaseMappableModel) -> ())) {
+    static func reusableRequest(url: String, description: Entity, completion: @escaping ((BaseMappableModel) -> ())) {
         guard let url = URL(string: url) else { return }
         
         AF.request(url).responseString { (response) in
             switch response.result {
             case .success(let string):
                 switch description {
-                case "planets":
+                case .planet:
                     guard let data = PlanetData(JSONString: string) else { return }
                     completion(data)
-                case "films":
+                case .film:
                     guard let data = FilmData(JSONString: string) else { return }
                     completion(data)
-                case "species":
+                case .species:
                     guard let data = SpeciesData(JSONString: string) else { return }
                     completion(data)
-                case "vehicles":
+                case .vehicle:
                     guard let data = VehicleData(JSONString: string) else { return }
                     completion(data)
-                case "starships":
+                case .starship:
                     guard let data = StarshipsData(JSONString: string) else { return }
                     completion(data)
-                default:
-                    return
+                case .people:
+                    guard let data = PeopleData(JSONString: string) else { return }
+                    completion(data)
                 }
             case .failure(let error):
                 print(error)

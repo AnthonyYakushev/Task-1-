@@ -33,7 +33,7 @@ class FilmData: BaseMappableModel {
         releaseDate <- map["release_date"]
         characters <- map["characters"]
         planets <- map["planets"]
-        starships <- map["starhips"]
+        starships <- map["starships"]
         vehicles <- map["vehicles"]
         species <- map["species"]
         created <- map["created"]

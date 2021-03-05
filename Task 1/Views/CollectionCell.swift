@@ -8,11 +8,11 @@
 import UIKit
 
 class CollectionCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    let vc = MyCollectionViewController(nibName: "MyCollectionViewController", bundle: nil) 
 
+    // MARK: - Properties
     var subtitles = [String]() {
         didSet {
             self.collectionView.reloadData()
@@ -21,14 +21,15 @@ class CollectionCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     
     var delegate: PresentingVCDelegate?
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(UINib.init(nibName: "NewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "newCollectionCell")
-//        self.delegate = vc
     }
     
+    // MARK: - UICollectionViewCell Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return subtitles.count
     }
@@ -37,8 +38,6 @@ class CollectionCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         
         let subtitle = subtitles[indexPath.row]
         cell.subtitleLabel.text = subtitle
-        cell.layer.cornerRadius = 10
-        cell.backgroundColor = .lightGray
         return cell
     }
     
@@ -48,17 +47,17 @@ class CollectionCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         if subtitle.contains("http") {
             switch subtitle {
             case let str where str.contains("films"):
-                delegate?.pushVC(string: subtitle, description: "films")
+                delegate?.pushVC(string: subtitle, description: .film)
             case let str where str.contains("planets"):
-                print("planets")
+                delegate?.pushVC(string: subtitle, description: .planet)
             case let str where str.contains("starships"):
-                print("starships")
+                delegate?.pushVC(string: subtitle, description: .starship)
             case let str where str.contains("people"):
-                print("people")
+                delegate?.pushVC(string: subtitle, description: .people)
             case let str where str.contains("species"):
-                print("species")
+                delegate?.pushVC(string: subtitle, description: .species)
             case let str where str.contains("vehicles"):
-                print("vehicles")
+                delegate?.pushVC(string: subtitle, description: .vehicle)
             default:
                 break
             }
