@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,21 +26,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-GI-WQr">
-                                <rect key="frame" x="8" y="40" width="259" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-YH-NB8">
+                                <rect key="frame" x="0.0" y="37" width="270" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t8n-ep-5jc">
+                                    <size key="itemSize" width="265" height="20"/>
+                                    <size key="estimatedItemSize" width="265" height="20"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="-1" id="IH7-ix-jCi"/>
+                                    <outlet property="delegate" destination="-1" id="X4Q-oL-4ht"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LXG-GI-WQr" firstAttribute="top" secondItem="MK1-cw-bDQ" secondAttribute="bottom" constant="8" id="7pp-RW-9eu"/>
+                            <constraint firstAttribute="trailing" secondItem="fpd-YH-NB8" secondAttribute="trailing" constant="5" id="0Z1-7U-kYw"/>
                             <constraint firstAttribute="trailing" secondItem="MK1-cw-bDQ" secondAttribute="trailing" constant="8" id="8m1-Eo-EDJ"/>
-                            <constraint firstItem="LXG-GI-WQr" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="8" id="HJE-OE-PiS"/>
+                            <constraint firstItem="fpd-YH-NB8" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" id="RoK-vr-bQz"/>
                             <constraint firstItem="MK1-cw-bDQ" firstAttribute="top" secondItem="AtB-cY-hJp" secondAttribute="top" constant="8" id="ekv-Dk-nJt"/>
-                            <constraint firstAttribute="trailing" secondItem="LXG-GI-WQr" secondAttribute="trailing" constant="8" id="gTg-Mj-1ml"/>
+                            <constraint firstItem="fpd-YH-NB8" firstAttribute="top" secondItem="MK1-cw-bDQ" secondAttribute="bottom" constant="5" id="gCK-sM-CJE"/>
+                            <constraint firstAttribute="bottom" secondItem="fpd-YH-NB8" secondAttribute="bottom" constant="3" id="ntj-xS-Z4a"/>
                             <constraint firstItem="MK1-cw-bDQ" firstAttribute="leading" secondItem="AtB-cY-hJp" secondAttribute="leading" constant="8" id="qe0-De-Gvd"/>
                         </constraints>
                     </view>
@@ -54,10 +65,15 @@
             </constraints>
             <size key="customSize" width="275" height="80"/>
             <connections>
-                <outlet property="subtitle" destination="LXG-GI-WQr" id="1WR-Fv-IIP"/>
+                <outlet property="collectionView" destination="fpd-YH-NB8" id="lXW-xy-R5M"/>
                 <outlet property="title" destination="MK1-cw-bDQ" id="jZY-Nn-vx6"/>
             </connections>
             <point key="canvasLocation" x="242.75362318840581" y="107.60869565217392"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

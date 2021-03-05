@@ -9,7 +9,7 @@ import UIKit
 
 class ListViewController: UITableViewController {
     // MARK: - Variables
-    var peoples = [People]()
+    var peoples = [PeopleData]()
     
     // MARK: - Life Cylce
     override func viewDidLoad() {

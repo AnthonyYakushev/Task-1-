@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class Planet: BaseMappableModel {
+class PlanetData: BaseMappableModel {
     var name: String?
     var rotationPeriod: String?
     var orbitalPeriod: String?

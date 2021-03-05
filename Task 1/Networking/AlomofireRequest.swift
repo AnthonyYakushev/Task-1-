@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class AlamofireRequest {
-    static func sendRequest(url: String, completion: @escaping (([People]) -> ())) {
+    static func sendRequest(url: String, completion: @escaping (([PeopleData]) -> ())) {
         
         guard let url = URL(string: url) else { return }
         
@@ -24,8 +24,8 @@ class AlamofireRequest {
                     switch response.result {
                     case .success(let string):
                         guard let peopleRequest = PeopleRequest(JSONString: string),
-                              let peoples = peopleRequest.results else { return }
-                        completion(peoples)
+                              let peoplesData = peopleRequest.results else { return }
+                        completion(peoplesData)
                     case .failure(let error):
                         print(error)
                     }
@@ -34,6 +34,38 @@ class AlamofireRequest {
                 print(error)
             }
         }
+    }
+    
+    static func reusableRequest(url: String, description: String, completion: @escaping ((BaseMappableModel) -> ())) {
+        guard let url = URL(string: url) else { return }
+        
+        AF.request(url).responseString { (response) in
+            switch response.result {
+            case .success(let string):
+                switch description {
+                case "planets":
+                    guard let data = PlanetData(JSONString: string) else { return }
+                    completion(data)
+                case "films":
+                    guard let data = FilmData(JSONString: string) else { return }
+                    completion(data)
+                case "species":
+                    guard let data = SpeciesData(JSONString: string) else { return }
+                    completion(data)
+                case "vehicles":
+                    guard let data = VehicleData(JSONString: string) else { return }
+                    completion(data)
+                case "starships":
+                    guard let data = StarshipsData(JSONString: string) else { return }
+                    completion(data)
+                default:
+                    return
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
 }
 

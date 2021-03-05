@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class species: BaseMappableModel {
+class SpeciesData: BaseMappableModel {
     var name: String?
     var classification: String?
     var designation: String?

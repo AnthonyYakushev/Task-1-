@@ -15,18 +15,24 @@
 		3A3B7C5325ECF5B6009B326A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B7C5225ECF5B6009B326A /* Assets.xcassets */; };
 		3A3B7C5625ECF5B6009B326A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B7C5425ECF5B6009B326A /* LaunchScreen.storyboard */; };
 		3A3B7C6425ECF985009B326A /* AlomofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */; };
-		3A3B7C6725ECFA20009B326A /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6625ECFA20009B326A /* People.swift */; };
+		3A3B7C6725ECFA20009B326A /* PeopleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C6625ECFA20009B326A /* PeopleData.swift */; };
 		3A3B7C8025ED3836009B326A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B7C7F25ED3836009B326A /* Constants.swift */; };
 		3A85869025EF64CE0062B8B6 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */; };
 		3A85869625EF67090062B8B6 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85869425EF67080062B8B6 /* CollectionCell.swift */; };
 		3A85869725EF67090062B8B6 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85869525EF67090062B8B6 /* CollectionCell.xib */; };
 		3A85869C25EF739C0062B8B6 /* MyCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85869B25EF739C0062B8B6 /* MyCollectionViewController.xib */; };
 		3A85869F25EF77300062B8B6 /* PeopleDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85869E25EF77300062B8B6 /* PeopleDescription.swift */; };
-		3A8586AF25F0BF280062B8B6 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586AE25F0BF280062B8B6 /* Planet.swift */; };
-		3A8586B325F0C1AF0062B8B6 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B225F0C1AF0062B8B6 /* Film.swift */; };
-		3A8586B725F0C5280062B8B6 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B625F0C5280062B8B6 /* Species.swift */; };
-		3A8586BA25F0C77B0062B8B6 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B925F0C77B0062B8B6 /* Vehicle.swift */; };
-		3A8586BD25F0CA750062B8B6 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586BC25F0CA750062B8B6 /* Starship.swift */; };
+		3A8586AF25F0BF280062B8B6 /* PlanetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586AE25F0BF280062B8B6 /* PlanetData.swift */; };
+		3A8586B325F0C1AF0062B8B6 /* FilmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B225F0C1AF0062B8B6 /* FilmData.swift */; };
+		3A8586B725F0C5280062B8B6 /* SpeciesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B625F0C5280062B8B6 /* SpeciesData.swift */; };
+		3A8586BA25F0C77B0062B8B6 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586B925F0C77B0062B8B6 /* VehicleData.swift */; };
+		3A8586BD25F0CA750062B8B6 /* StarshipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586BC25F0CA750062B8B6 /* StarshipsData.swift */; };
+		3A8586E825F12C3A0062B8B6 /* NewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586E625F12C3A0062B8B6 /* NewCollectionCell.swift */; };
+		3A8586E925F12C3A0062B8B6 /* NewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8586E725F12C3A0062B8B6 /* NewCollectionCell.xib */; };
+		3A8586EF25F167B60062B8B6 /* FilmDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8586EE25F167B60062B8B6 /* FilmDescription.swift */; };
+		3A8586F725F20E910062B8B6 /* ReusableCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8586F525F20E910062B8B6 /* ReusableCollectionVC.xib */; };
+		3A85870325F20F8B0062B8B6 /* ReusalbeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85870125F20F8B0062B8B6 /* ReusalbeCell.xib */; };
+		3A85870B25F228EC0062B8B6 /* PresentingVCDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85870A25F228EC0062B8B6 /* PresentingVCDelegate .swift */; };
 		3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138F925EE0E0100F63AB2 /* Request.swift */; };
 		3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */; };
 		3AC1390525EE223800F63AB2 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1390425EE223800F63AB2 /* ListViewController.swift */; };
@@ -46,18 +52,24 @@
 		3A3B7C5525ECF5B6009B326A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A3B7C5725ECF5B6009B326A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlomofireRequest.swift; sourceTree = "<group>"; };
-		3A3B7C6625ECFA20009B326A /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		3A3B7C6625ECFA20009B326A /* PeopleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleData.swift; sourceTree = "<group>"; };
 		3A3B7C7F25ED3836009B326A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		3A85869425EF67080062B8B6 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		3A85869525EF67090062B8B6 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		3A85869B25EF739C0062B8B6 /* MyCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewController.xib; sourceTree = "<group>"; };
 		3A85869E25EF77300062B8B6 /* PeopleDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDescription.swift; sourceTree = "<group>"; };
-		3A8586AE25F0BF280062B8B6 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		3A8586B225F0C1AF0062B8B6 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
-		3A8586B625F0C5280062B8B6 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
-		3A8586B925F0C77B0062B8B6 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		3A8586BC25F0CA750062B8B6 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		3A8586AE25F0BF280062B8B6 /* PlanetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetData.swift; sourceTree = "<group>"; };
+		3A8586B225F0C1AF0062B8B6 /* FilmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmData.swift; sourceTree = "<group>"; };
+		3A8586B625F0C5280062B8B6 /* SpeciesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesData.swift; sourceTree = "<group>"; };
+		3A8586B925F0C77B0062B8B6 /* VehicleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
+		3A8586BC25F0CA750062B8B6 /* StarshipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsData.swift; sourceTree = "<group>"; };
+		3A8586E625F12C3A0062B8B6 /* NewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionCell.swift; sourceTree = "<group>"; };
+		3A8586E725F12C3A0062B8B6 /* NewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCollectionCell.xib; sourceTree = "<group>"; };
+		3A8586EE25F167B60062B8B6 /* FilmDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDescription.swift; sourceTree = "<group>"; };
+		3A8586F525F20E910062B8B6 /* ReusableCollectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableCollectionVC.xib; sourceTree = "<group>"; };
+		3A85870125F20F8B0062B8B6 /* ReusalbeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusalbeCell.xib; sourceTree = "<group>"; };
+		3A85870A25F228EC0062B8B6 /* PresentingVCDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentingVCDelegate .swift"; sourceTree = "<group>"; };
 		3AC138F925EE0E0100F63AB2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequest.swift; sourceTree = "<group>"; };
 		3AC1390425EE223800F63AB2 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 				3AC1395E25EE75F400F63AB2 /* Views */,
 				3AC1390725EE223C00F63AB2 /* Controllers */,
 				3AC1390825EE224F00F63AB2 /* Networking */,
+				3A85870825F228C70062B8B6 /* Protocols */,
 				3AC1390D25EE2BBE00F63AB2 /* Storyboards */,
 				3AC1393025EE648D00F63AB2 /* XIBs */,
 				3AC1390C25EE2BAC00F63AB2 /* Supporting Files */,
@@ -118,22 +131,40 @@
 			isa = PBXGroup;
 			children = (
 				3A85869525EF67090062B8B6 /* CollectionCell.xib */,
+				3A8586E725F12C3A0062B8B6 /* NewCollectionCell.xib */,
+				3A85870125F20F8B0062B8B6 /* ReusalbeCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3A8586DE25F118AB0062B8B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AC138F925EE0E0100F63AB2 /* Request.swift */,
+				3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */,
+				3A3B7C6625ECFA20009B326A /* PeopleData.swift */,
+				3A8586B225F0C1AF0062B8B6 /* FilmData.swift */,
+				3A8586AE25F0BF280062B8B6 /* PlanetData.swift */,
+				3A8586B625F0C5280062B8B6 /* SpeciesData.swift */,
+				3A8586B925F0C77B0062B8B6 /* VehicleData.swift */,
+				3A8586BC25F0CA750062B8B6 /* StarshipsData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A85870825F228C70062B8B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3A85870A25F228EC0062B8B6 /* PresentingVCDelegate .swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		3AC138F825EE0DE800F63AB2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A3B7C6625ECFA20009B326A /* People.swift */,
-				3AC138F925EE0E0100F63AB2 /* Request.swift */,
-				3AC138FE25EE104300F63AB2 /* PeopleRequest.swift */,
 				3A85869E25EF77300062B8B6 /* PeopleDescription.swift */,
-				3A8586AE25F0BF280062B8B6 /* Planet.swift */,
-				3A8586B225F0C1AF0062B8B6 /* Film.swift */,
-				3A8586B625F0C5280062B8B6 /* Species.swift */,
-				3A8586B925F0C77B0062B8B6 /* Vehicle.swift */,
-				3A8586BC25F0CA750062B8B6 /* Starship.swift */,
+				3A8586EE25F167B60062B8B6 /* FilmDescription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +182,7 @@
 		3AC1390825EE224F00F63AB2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3A8586DE25F118AB0062B8B6 /* Models */,
 				3A3B7C6325ECF985009B326A /* AlomofireRequest.swift */,
 				3AC1392D25EE628B00F63AB2 /* BaseMappableModel.swift */,
 			);
@@ -191,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC1395B25EE75AA00F63AB2 /* TableCell.swift */,
+				3A8586E625F12C3A0062B8B6 /* NewCollectionCell.swift */,
 				3A85869425EF67080062B8B6 /* CollectionCell.swift */,
 			);
 			path = Views;
@@ -202,6 +235,7 @@
 				3AC1396325EE79FE00F63AB2 /* MainViewController.xib */,
 				3AC1395825EE74F400F63AB2 /* ListViewController.xib */,
 				3A85869B25EF739C0062B8B6 /* MyCollectionViewController.xib */,
+				3A8586F525F20E910062B8B6 /* ReusableCollectionVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -284,11 +318,14 @@
 			files = (
 				3A85869C25EF739C0062B8B6 /* MyCollectionViewController.xib in Resources */,
 				3A3B7C5625ECF5B6009B326A /* LaunchScreen.storyboard in Resources */,
+				3A85870325F20F8B0062B8B6 /* ReusalbeCell.xib in Resources */,
 				3AC1396425EE79FE00F63AB2 /* MainViewController.xib in Resources */,
 				3A3B7C5325ECF5B6009B326A /* Assets.xcassets in Resources */,
+				3A8586E925F12C3A0062B8B6 /* NewCollectionCell.xib in Resources */,
 				3AC1395925EE74F400F63AB2 /* ListViewController.xib in Resources */,
 				3A3B7C5125ECF5B2009B326A /* Main.storyboard in Resources */,
 				3A85869725EF67090062B8B6 /* CollectionCell.xib in Resources */,
+				3A8586F725F20E910062B8B6 /* ReusableCollectionVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,23 +379,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3B7C6425ECF985009B326A /* AlomofireRequest.swift in Sources */,
+				3A85870B25F228EC0062B8B6 /* PresentingVCDelegate .swift in Sources */,
 				3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */,
 				3A3B7C4E25ECF5B2009B326A /* MainViewController.swift in Sources */,
-				3A8586BA25F0C77B0062B8B6 /* Vehicle.swift in Sources */,
+				3A8586BA25F0C77B0062B8B6 /* VehicleData.swift in Sources */,
 				3AC1390525EE223800F63AB2 /* ListViewController.swift in Sources */,
 				3AC1392E25EE628B00F63AB2 /* BaseMappableModel.swift in Sources */,
 				3A3B7C4A25ECF5B2009B326A /* AppDelegate.swift in Sources */,
-				3A8586BD25F0CA750062B8B6 /* Starship.swift in Sources */,
+				3A8586BD25F0CA750062B8B6 /* StarshipsData.swift in Sources */,
 				3A3B7C4C25ECF5B2009B326A /* SceneDelegate.swift in Sources */,
 				3A3B7C8025ED3836009B326A /* Constants.swift in Sources */,
 				3AC138FF25EE104300F63AB2 /* PeopleRequest.swift in Sources */,
 				3AC1395C25EE75AA00F63AB2 /* TableCell.swift in Sources */,
-				3A8586AF25F0BF280062B8B6 /* Planet.swift in Sources */,
+				3A8586AF25F0BF280062B8B6 /* PlanetData.swift in Sources */,
 				3A85869025EF64CE0062B8B6 /* MyCollectionViewController.swift in Sources */,
+				3A8586E825F12C3A0062B8B6 /* NewCollectionCell.swift in Sources */,
 				3A85869625EF67090062B8B6 /* CollectionCell.swift in Sources */,
-				3A8586B325F0C1AF0062B8B6 /* Film.swift in Sources */,
-				3A3B7C6725ECFA20009B326A /* People.swift in Sources */,
-				3A8586B725F0C5280062B8B6 /* Species.swift in Sources */,
+				3A8586B325F0C1AF0062B8B6 /* FilmData.swift in Sources */,
+				3A8586EF25F167B60062B8B6 /* FilmDescription.swift in Sources */,
+				3A3B7C6725ECFA20009B326A /* PeopleData.swift in Sources */,
+				3A8586B725F0C5280062B8B6 /* SpeciesData.swift in Sources */,
 				3A85869F25EF77300062B8B6 /* PeopleDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

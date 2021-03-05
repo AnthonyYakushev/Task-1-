@@ -1,5 +1,5 @@
 //
-//  Vehicle.swift
+//  Starships.swift
 //  Task 1
 //
 //  Created by Anton Yakushev on 3/4/21.
@@ -8,10 +8,10 @@
 import Foundation
 import ObjectMapper
 
-class Vehicle: BaseMappableModel {
+class StarshipsData: BaseMappableModel {
     var name: String?
     var model: String?
-    var manufacture: String?
+    var manufacturer: String?
     var costInCredits: String?
     var length: String?
     var maxAtmospheringSpeed: String?
@@ -19,7 +19,9 @@ class Vehicle: BaseMappableModel {
     var passengers: String?
     var cargoCapacity: String?
     var consumables: String?
-    var vehicleClass: String?
+    var hyperdriveRating: String?
+    var MGLT: String?
+    var starshipClass: String?
     var pilots: [String]?
     var films: [String]?
     var created: String?
@@ -29,13 +31,17 @@ class Vehicle: BaseMappableModel {
     override func mapping(map: Map) {
         name <- map["name"]
         model <- map["model"]
-        manufacture <- map["manufacture"]
+        manufacturer <- map["manufacturer"]
         costInCredits <- map["cost_in_credits"]
+        length <- map["length"]
         maxAtmospheringSpeed <- map["max_atmosphering_speed"]
         crew <- map["crew"]
+        passengers <- map["passengers"]
         cargoCapacity <- map["cargo_capacity"]
         consumables <- map["consumables"]
-        vehicleClass <- map["vehicle_class"]
+        hyperdriveRating <- map["hyperdrive_rating"]
+        MGLT <- map["MGLT"]
+        starshipClass <- map["starship_class"]
         pilots <- map["pilots"]
         films <- map["films"]
         created <- map["created"]

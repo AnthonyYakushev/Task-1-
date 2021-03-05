@@ -11,7 +11,7 @@ import ObjectMapper
 class PeopleRequest: BaseMappableModel {
     var count: Int?
     var next: String?
-    var results: [People]?
+    var results: [PeopleData]?
     
     override func mapping(map: Map) {
         count <- map["count"]

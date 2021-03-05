@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class People: BaseMappableModel {
+class PeopleData: BaseMappableModel {
     var name: String?
     var height: String?
     var mass: String?

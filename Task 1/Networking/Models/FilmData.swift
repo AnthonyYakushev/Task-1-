@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class Film: BaseMappableModel {
+class FilmData: BaseMappableModel {
     var title: String?
     var episodeID: Int?
     var openingCrawl: String?

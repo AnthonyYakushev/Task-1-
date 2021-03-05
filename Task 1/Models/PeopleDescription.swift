@@ -11,7 +11,7 @@ struct PeopleDescription {
     var title: String
     var subtitle: [String]
     
-    static func getArrayFromPeople(_ people: People) -> [PeopleDescription] {
+    static func getArrayFromPeople(_ people: PeopleData) -> [PeopleDescription] {
         var peopleDescriptionArray = [PeopleDescription]()
         
         if let name = people.name, name.isEmpty == false {
@@ -50,8 +50,8 @@ struct PeopleDescription {
             peopleDescriptionArray.append(PeopleDescription(title: "homeWorld", subtitle: [homeworld]))
         }
 
-        if let films = people.films, films.isEmpty == false {
-            peopleDescriptionArray.append(PeopleDescription(title: "Films:", subtitle: films))
+        if let filmsData = people.films, filmsData.isEmpty == false {
+            peopleDescriptionArray.append(PeopleDescription(title: "Films:", subtitle: filmsData))
         }
         
         if let species = people.species, species.isEmpty == false {
