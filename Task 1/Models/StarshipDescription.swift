@@ -75,11 +75,11 @@ struct StarshipDescription {
         }
         
         if let created = starship.created, created.isEmpty == false {
-            starshipDescriptionArray.append(StarshipDescription(title: "Created:", subtitle: [created]))
+            starshipDescriptionArray.append(StarshipDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = starship.edited, edited.isEmpty == false {
-            starshipDescriptionArray.append(StarshipDescription(title: "Edited:", subtitle: [edited]))
+            starshipDescriptionArray.append(StarshipDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = starship.url, url.isEmpty == false {

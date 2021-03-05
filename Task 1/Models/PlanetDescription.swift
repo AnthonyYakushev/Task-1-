@@ -59,11 +59,11 @@ struct PlanetDescription {
         }
         
         if let created = planet.created, created.isEmpty == false {
-            planetDescriptionArray.append(PlanetDescription(title: "Created:", subtitle: [created]))
+            planetDescriptionArray.append(PlanetDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = planet.edited, edited.isEmpty == false {
-            planetDescriptionArray.append(PlanetDescription(title: "Edited:", subtitle: [edited]))
+            planetDescriptionArray.append(PlanetDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = planet.url, url.isEmpty == false {

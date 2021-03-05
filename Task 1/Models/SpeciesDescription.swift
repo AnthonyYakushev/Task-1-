@@ -63,11 +63,11 @@ struct SpeciesDescription {
         }
         
         if let created = species.created, created.isEmpty == false {
-            speciesDescriptionArray.append(SpeciesDescription(title: "Created:", subtitle: [created]))
+            speciesDescriptionArray.append(SpeciesDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = species.edited, edited.isEmpty == false {
-            speciesDescriptionArray.append(SpeciesDescription(title: "Edited:", subtitle: [edited]))
+            speciesDescriptionArray.append(SpeciesDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = species.url, url.isEmpty == false {

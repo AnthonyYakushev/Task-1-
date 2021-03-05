@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftDate
 
 struct VehicleDescription {
     var title: String
@@ -67,11 +68,11 @@ struct VehicleDescription {
         }
         
         if let created = vehicle.created, created.isEmpty == false {
-            vehicleDescriptionArray.append(VehicleDescription(title: "Created:", subtitle: [created]))
+            vehicleDescriptionArray.append(VehicleDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = vehicle.edited, edited.isEmpty == false {
-            vehicleDescriptionArray.append(VehicleDescription(title: "Edited:", subtitle: [edited]))
+            vehicleDescriptionArray.append(VehicleDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = vehicle.url, url.isEmpty == false {

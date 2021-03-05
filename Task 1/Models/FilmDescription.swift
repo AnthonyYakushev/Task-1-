@@ -59,11 +59,11 @@ struct FilmDescription {
         }
         
         if let created = film.created, created.isEmpty == false {
-            filmDescriptionArray.append(FilmDescription(title: "Created:", subtitle: [created]))
+            filmDescriptionArray.append(FilmDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = film.edited, edited.isEmpty == false {
-            filmDescriptionArray.append(FilmDescription(title: "Edited:", subtitle: [edited]))
+            filmDescriptionArray.append(FilmDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = film.url, url.isEmpty == false {

@@ -67,11 +67,11 @@ struct PeopleDescription {
         }
         
         if let created = people.created, created.isEmpty == false {
-            peopleDescriptionArray.append(PeopleDescription(title: "Created:", subtitle: [created]))
+            peopleDescriptionArray.append(PeopleDescription(title: "Created:", subtitle: [getDate(string: created)]))
         }
         
         if let edited = people.edited, edited.isEmpty == false {
-            peopleDescriptionArray.append(PeopleDescription(title: "Edited:", subtitle: [edited]))
+            peopleDescriptionArray.append(PeopleDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
         }
         
         if let url = people.url, url.isEmpty == false {
