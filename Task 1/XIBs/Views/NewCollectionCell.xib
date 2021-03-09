@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElC-9D-x9s">
-                        <rect key="frame" x="2" y="2" width="46" height="46"/>
+                        <rect key="frame" x="0.0" y="29.5" width="50" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -26,15 +26,14 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ElC-9D-x9s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="HhU-0R-u9z"/>
-                <constraint firstAttribute="trailing" secondItem="ElC-9D-x9s" secondAttribute="trailing" constant="2" id="Hst-1n-1Bd"/>
-                <constraint firstAttribute="bottom" secondItem="ElC-9D-x9s" secondAttribute="bottom" constant="2" id="SlG-b2-CtH"/>
-                <constraint firstItem="ElC-9D-x9s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="e7Y-9D-RGU"/>
+                <constraint firstAttribute="trailing" secondItem="ElC-9D-x9s" secondAttribute="trailing" id="Hst-1n-1Bd"/>
+                <constraint firstAttribute="bottom" secondItem="ElC-9D-x9s" secondAttribute="bottom" id="SlG-b2-CtH"/>
+                <constraint firstItem="ElC-9D-x9s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e7Y-9D-RGU"/>
             </constraints>
             <connections>
                 <outlet property="subtitleLabel" destination="ElC-9D-x9s" id="0Ti-W5-SBy"/>
             </connections>
-            <point key="canvasLocation" x="139" y="72"/>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
         </collectionViewCell>
     </objects>
 </document>

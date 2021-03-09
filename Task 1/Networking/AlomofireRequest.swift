@@ -66,7 +66,6 @@ class AlamofireRequest {
                 print(error)
             }
         }
-        
     }
 }
 

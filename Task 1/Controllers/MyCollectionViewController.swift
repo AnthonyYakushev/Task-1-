@@ -26,7 +26,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    var peopleDescriptions = [PeopleDescription]()
+    lazy var peopleDescriptions = [PeopleDescription]()
     
     var film: FilmData? {
         didSet {
@@ -36,7 +36,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    var films = [FilmDescription]()
+    lazy var films = [FilmDescription]()
     
     var planet: PlanetData? {
         didSet {
@@ -46,7 +46,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    var planets = [PlanetDescription]()
+    lazy var planets = [PlanetDescription]()
     
     var species: SpeciesData? {
         didSet {
@@ -56,8 +56,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    
-    var speciesArray = [SpeciesDescription]()
+    lazy var speciesArray = [SpeciesDescription]()
     
     var starship: StarshipsData? {
         didSet {
@@ -67,8 +66,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    
-    var starships = [StarshipDescription]()
+    lazy var starships = [StarshipDescription]()
     
     var vehicle: VehicleData? {
         didSet {
@@ -78,8 +76,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
-    
-    var vehicles = [VehicleDescription]()
+    lazy var vehicles = [VehicleDescription]()
     
     // MARK: - Life cycle
     override func viewDidLoad() {

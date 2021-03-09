@@ -29,7 +29,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-YH-NB8">
                                 <rect key="frame" x="0.0" y="37" width="270" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t8n-ep-5jc">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="t8n-ep-5jc">
                                     <size key="itemSize" width="265" height="20"/>
                                     <size key="estimatedItemSize" width="265" height="20"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

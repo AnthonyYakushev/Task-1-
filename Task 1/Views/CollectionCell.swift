@@ -37,7 +37,11 @@ class CollectionCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newCollectionCell", for: indexPath as IndexPath) as! NewCollectionCell
         
         let subtitle = subtitles[indexPath.row]
-        cell.subtitleLabel.text = subtitle
+        if subtitle.contains("http") {
+            cell.subtitleLabel.text = "Link №\(indexPath.row + 1)"
+        } else {
+            cell.subtitleLabel.text = subtitle
+        }
         return cell
     }
     
