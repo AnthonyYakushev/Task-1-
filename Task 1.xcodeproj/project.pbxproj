@@ -23,7 +23,7 @@
 		3A7A31C225F251A7008CACE7 /* StarshipDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A31C125F251A7008CACE7 /* StarshipDescription.swift */; };
 		3A7A31C525F256AC008CACE7 /* VehicleDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A31C425F256AC008CACE7 /* VehicleDescription.swift */; };
 		3A7A31D425F26A40008CACE7 /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7A31D325F26A3F008CACE7 /* PeopleViewController.xib */; };
-		3A7A31DB25F27385008CACE7 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A31DA25F27385008CACE7 /* DateFormatterExtension.swift */; };
+		3A7A31DB25F27385008CACE7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A31DA25F27385008CACE7 /* DateFormatter.swift */; };
 		3A85869025EF64CE0062B8B6 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */; };
 		3A85869625EF67090062B8B6 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85869425EF67080062B8B6 /* CollectionCell.swift */; };
 		3A85869725EF67090062B8B6 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85869525EF67090062B8B6 /* CollectionCell.xib */; };
@@ -64,7 +64,7 @@
 		3A7A31C125F251A7008CACE7 /* StarshipDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDescription.swift; sourceTree = "<group>"; };
 		3A7A31C425F256AC008CACE7 /* VehicleDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDescription.swift; sourceTree = "<group>"; };
 		3A7A31D325F26A3F008CACE7 /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
-		3A7A31DA25F27385008CACE7 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		3A7A31DA25F27385008CACE7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3A85868E25EF64CE0062B8B6 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		3A85869425EF67080062B8B6 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		3A85869525EF67090062B8B6 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
@@ -127,12 +127,21 @@
 				3AC1395E25EE75F400F63AB2 /* Views */,
 				3AC1390725EE223C00F63AB2 /* Controllers */,
 				3AC1390825EE224F00F63AB2 /* Networking */,
-				3A85870825F228C70062B8B6 /* Protocols */,
-				3AC1390D25EE2BBE00F63AB2 /* Storyboards */,
 				3AC1393025EE648D00F63AB2 /* XIBs */,
+				3A85870825F228C70062B8B6 /* Protocols */,
+				3A7A31F125F74DB5008CACE7 /* Extensions */,
+				3AC1390D25EE2BBE00F63AB2 /* Storyboards */,
 				3AC1390C25EE2BAC00F63AB2 /* Supporting Files */,
 			);
 			path = "Task 1";
+			sourceTree = "<group>";
+		};
+		3A7A31F125F74DB5008CACE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A7A31DA25F27385008CACE7 /* DateFormatter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3A85869325EF66CC0062B8B6 /* Views */ = {
@@ -205,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				3A3B7C7F25ED3836009B326A /* Constants.swift */,
-				3A7A31DA25F27385008CACE7 /* DateFormatterExtension.swift */,
 				3A3B7C4925ECF5B2009B326A /* AppDelegate.swift */,
 				3A3B7C4B25ECF5B2009B326A /* SceneDelegate.swift */,
 				3A3B7C5225ECF5B6009B326A /* Assets.xcassets */,
@@ -390,7 +398,7 @@
 			files = (
 				3A3B7C6425ECF985009B326A /* AlomofireRequest.swift in Sources */,
 				3A85870B25F228EC0062B8B6 /* PresentingVCDelegate .swift in Sources */,
-				3A7A31DB25F27385008CACE7 /* DateFormatterExtension.swift in Sources */,
+				3A7A31DB25F27385008CACE7 /* DateFormatter.swift in Sources */,
 				3AC138FA25EE0E0100F63AB2 /* Request.swift in Sources */,
 				3A3B7C4E25ECF5B2009B326A /* MainViewController.swift in Sources */,
 				3A8586BA25F0C77B0062B8B6 /* VehicleData.swift in Sources */,

@@ -68,11 +68,11 @@ struct VehicleDescription {
         }
         
         if let created = vehicle.created, created.isEmpty == false {
-            vehicleDescriptionArray.append(VehicleDescription(title: "Created:", subtitle: [getDate(string: created)]))
+            vehicleDescriptionArray.append(VehicleDescription(title: "Created:", subtitle: [created.getDate()]))
         }
         
         if let edited = vehicle.edited, edited.isEmpty == false {
-            vehicleDescriptionArray.append(VehicleDescription(title: "Edited:", subtitle: [getDate(string: edited)]))
+            vehicleDescriptionArray.append(VehicleDescription(title: "Edited:", subtitle: [edited.getDate()]))
         }
         
         if let url = vehicle.url, url.isEmpty == false {
