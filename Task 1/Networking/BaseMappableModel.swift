@@ -24,4 +24,5 @@ public class BaseMappableModel: NSObject, Mappable {
     public func mapping(map: Map) {
         
     }
+
 }

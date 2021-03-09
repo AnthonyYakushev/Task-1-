@@ -17,41 +17,40 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     // MARK: - Variables
     lazy var url = ""
     var myentity: Entity?
+    var entityDescriptions: [EntityDescription]?
+    var data: BaseMappableModel?
     
     var people: PeopleData? {
         didSet {
             if let people = people {
-                self.peopleDescriptions = PeopleDescription.getArrayFromPeople(people)
+                self.entityDescriptions = PeopleDescription.getArrayFromPeople(people)
                 self.updateUI()
             }
         }
     }
-    lazy var peopleDescriptions = [PeopleDescription]()
     
     var film: FilmData? {
         didSet {
             if let film = film {
-                self.films = FilmDescription.getArrayFromFilms(film)
+                self.entityDescriptions = FilmDescription.getArrayFromFilms(film)
                 self.updateUI()
             }
         }
     }
-    lazy var films = [FilmDescription]()
     
     var planet: PlanetData? {
         didSet {
             if let planet = planet {
-                self.planets = PlanetDescription.getArrayFromFilms(planet)
+                self.entityDescriptions = PlanetDescription.getArrayFromFilms(planet)
                 self.updateUI()
             }
         }
     }
-    lazy var planets = [PlanetDescription]()
     
     var species: SpeciesData? {
         didSet {
             if let species = species {
-                self.speciesArray = SpeciesDescription.getArrayFromFilms(species)
+                self.entityDescriptions = SpeciesDescription.getArrayFromFilms(species)
                 self.updateUI()
             }
         }
@@ -61,22 +60,20 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     var starship: StarshipsData? {
         didSet {
             if let starship = starship {
-                self.starships = StarshipDescription.getArrayFromFilms(starship)
+                self.entityDescriptions = StarshipDescription.getArrayFromFilms(starship)
                 self.updateUI()
             }
         }
     }
-    lazy var starships = [StarshipDescription]()
     
     var vehicle: VehicleData? {
         didSet {
             if let vehicle = vehicle {
-                self.vehicles = VehicleDescription.getArrayFromFilms(vehicle)
+                self.entityDescriptions = VehicleDescription.getArrayFromFilms(vehicle)
                 self.updateUI()
             }
         }
     }
-    lazy var vehicles = [VehicleDescription]()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -124,65 +121,17 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     }
     // MARK:- UICollectionView DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch myentity {
-        case .film:
-            return films.count
-        case .planet:
-            return planets.count
-        case .species:
-            return speciesArray.count
-        case .starship:
-            return starships.count
-        case .vehicle:
-            return vehicles.count
-        case .people:
-            return peopleDescriptions.count
-        default:
-            return 0
-        }
+        guard let entityDescription = entityDescriptions else { return 0 }
+        return entityDescription.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
-        switch myentity {
-        case .film:
-            let object = films[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .planet:
-            let object = planets[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .species:
-            let object = speciesArray[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .starship:
-            let object = starships[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .vehicle:
-            let object = vehicles[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .people:
-            let object = peopleDescriptions[indexPath.row]
-            cell.title.text = object.title
-            cell.subtitles = object.subtitle
-            cell.delegate = self
-            return cell
-        case .none:
-            return cell
-        }
+        guard let entityDescription = entityDescriptions else { return cell}
+        let object = entityDescription[indexPath.row]
+        cell.title.text = object.title
+        cell.subtitles = object.subtitle
+        cell.delegate = self
+        return cell
     }
 }

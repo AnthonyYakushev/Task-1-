@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpeciesDescription {
+struct SpeciesDescription: EntityDescription {
     var title: String
     var subtitle: [String]
     

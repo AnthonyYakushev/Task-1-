@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlanetDescription {
+struct PlanetDescription: EntityDescription {
     var title: String
     var subtitle: [String]
     

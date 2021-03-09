@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FilmDescription {
+struct FilmDescription: EntityDescription {
     var title: String
     var subtitle: [String]
     

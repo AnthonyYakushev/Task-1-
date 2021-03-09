@@ -8,7 +8,7 @@
 import Foundation
 import SwiftDate
 
-struct VehicleDescription {
+struct VehicleDescription: EntityDescription {
     var title: String
     var subtitle: [String]
     

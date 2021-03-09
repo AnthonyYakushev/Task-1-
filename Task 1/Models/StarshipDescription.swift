@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StarshipDescription {
+struct StarshipDescription: EntityDescription {
     var title: String
     var subtitle: [String]
     

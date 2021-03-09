@@ -67,5 +67,37 @@ class AlamofireRequest {
             }
         }
     }
+    
+    static func newReusableRequest(url: String, description: Entity, completion: @escaping ((BaseMappableModel) -> ())) {
+        guard let url = URL(string: url) else { return }
+        
+        AF.request(url).responseString { (response) in
+            switch response.result {
+            case .success(let string):
+                switch description {
+                case .planet:
+                    guard let data = PlanetData(JSONString: string) else { return }
+                    completion(data)
+                case .film:
+                    guard let data = FilmData(JSONString: string) else { return }
+                    completion(data)
+                case .species:
+                    guard let data = SpeciesData(JSONString: string) else { return }
+                    completion(data)
+                case .vehicle:
+                    guard let data = VehicleData(JSONString: string) else { return }
+                    completion(data)
+                case .starship:
+                    guard let data = StarshipsData(JSONString: string) else { return }
+                    completion(data)
+                case .people:
+                    guard let data = PeopleData(JSONString: string) else { return }
+                    completion(data)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
