@@ -17,61 +17,9 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     // MARK: - Variables
     lazy var url = ""
     var myentity: Entity?
-    var entityDescriptions: [EntityDescription]?
-    var data: BaseMappableModel?
-    
-    var people: PeopleData? {
+    var entityDescriptions: [EntityDescription]? {
         didSet {
-            if let people = people {
-                self.entityDescriptions = PeopleDescription.getArrayFromPeople(people)
-                self.updateUI()
-            }
-        }
-    }
-    
-    var film: FilmData? {
-        didSet {
-            if let film = film {
-                self.entityDescriptions = FilmDescription.getArrayFromFilms(film)
-                self.updateUI()
-            }
-        }
-    }
-    
-    var planet: PlanetData? {
-        didSet {
-            if let planet = planet {
-                self.entityDescriptions = PlanetDescription.getArrayFromFilms(planet)
-                self.updateUI()
-            }
-        }
-    }
-    
-    var species: SpeciesData? {
-        didSet {
-            if let species = species {
-                self.entityDescriptions = SpeciesDescription.getArrayFromFilms(species)
-                self.updateUI()
-            }
-        }
-    }
-    lazy var speciesArray = [SpeciesDescription]()
-    
-    var starship: StarshipsData? {
-        didSet {
-            if let starship = starship {
-                self.entityDescriptions = StarshipDescription.getArrayFromFilms(starship)
-                self.updateUI()
-            }
-        }
-    }
-    
-    var vehicle: VehicleData? {
-        didSet {
-            if let vehicle = vehicle {
-                self.entityDescriptions = VehicleDescription.getArrayFromFilms(vehicle)
-                self.updateUI()
-            }
+            self.updateUI()
         }
     }
     
@@ -85,29 +33,14 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         self.activityIndicator.startAnimating()
         
         guard let entity = myentity else { return }
-        reusableRequest(url: url, description: entity)
-    }
-    
-    // MARK: - Methods
-    func reusableRequest(url: String, description: Entity) {
-        AlamofireRequest.reusableRequest(url: url, description: description) { [weak self] (data) in
-            switch description {
-            case .planet:
-                self?.planet = data as? PlanetData
-            case .film:
-                self?.film = data as? FilmData
-            case .species:
-                self?.species = data as? SpeciesData
-            case  .vehicle:
-                self?.vehicle = data as? VehicleData
-            case .starship:
-                self?.starship = data as? StarshipsData
-            case .people:
-                self?.people = data as? PeopleData
-            }
+        
+        AlamofireRequest.reusableRequest(url: url,
+                                         description: entity) { [weak self] (descriptions) in
+            self?.entityDescriptions = descriptions
         }
     }
     
+    // MARK: - Methods
     func pushVC(string: String, description: Entity) {
         let vc = MyCollectionViewController(nibName: "MyCollectionViewController", bundle: nil)
         vc.url = string
