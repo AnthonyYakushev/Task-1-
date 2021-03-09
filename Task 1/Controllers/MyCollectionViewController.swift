@@ -9,7 +9,6 @@ import UIKit
 import ObjectMapper
 
 class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, PresentingVCDelegate {
-    
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -32,11 +31,11 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         self.activityIndicator.hidesWhenStopped = true
         self.activityIndicator.startAnimating()
         
-        guard let entity = myentity else { return }
-        
-        AlamofireRequest.reusableRequest(url: url,
-                                         description: entity) { [weak self] (descriptions) in
-            self?.entityDescriptions = descriptions
+        if let entity = myentity {
+            AlamofireRequest.reusableRequest(url: url,
+                                             description: entity) { [weak self] (descriptions) in
+                self?.entityDescriptions = descriptions
+            }
         }
     }
     
@@ -52,6 +51,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         self.activityIndicator.stopAnimating()
         self.collectionView.reloadData()
     }
+    
     // MARK:- UICollectionView DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let entityDescription = entityDescriptions else { return 0 }
